@@ -101,3 +101,11 @@ route::get('compra', function (request $request) {
     $resultado2 = $numeroUm / 10;
     return $resultado2;
 });
+
+route::get('recebendo', function (request $request) {
+    $numeroUm = 5;
+    $numeroDois = $request->input('recebido');
+    $porcentagem = $numeroDois / 100;
+    $resultado2 = $numeroDois + ($porcentagem * $numeroUm);
+    return $resultado2;
+});
