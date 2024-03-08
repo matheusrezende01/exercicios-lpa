@@ -118,3 +118,10 @@ route::get('days', function (request $request) {
     $resultado = $Dias . " " . $horas . " " . $minutos . " " . $segundos;
     return $resultado;
 });
+
+route::get('buy', function (request $request) {
+    $compras = $request->input('compras');
+     $quantidade = $request->input('quantidade');
+     $resultado = $compras * $quantidade;
+     return $resultado;
+ });
