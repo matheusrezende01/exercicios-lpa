@@ -95,3 +95,9 @@ route::get('salario', function (request $request) {
     $resultado2 = $numeroUm . " " . $numeroDois . "% " . $resultado * $numeroDois + $numeroUm;
     return $resultado2;
 });
+
+route::get('compra', function (request $request) {
+    $numeroUm = $request->input('valorCompra');
+    $resultado2 = $numeroUm / 10;
+    return $resultado2;
+});
