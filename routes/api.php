@@ -66,3 +66,9 @@ route::get('receber', function (request $request) {
     $resultado =$numeroDois / $numeroUm;
     return $resultado;
 });
+
+route::get('dobro', function (request $request) {
+    $numeroUm = $request->input('primeiroNumero');
+    $resultado = "O dobro do " . $numeroUm . " é igual a " . $numeroUm * 2;
+    return $resultado;
+});
