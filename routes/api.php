@@ -79,3 +79,11 @@ route::get('area', function (request $request) {
     $resultado = "a area é " . $numeroUm * $numeroDois;
     return $resultado;
 });
+
+route::get('porcentagens', function (request $request) {
+    $numeroUm = $request->input('precoOriginal');
+    $numeroDois = $request ->input('porcentagem');
+    $resultado = $numeroUm / 100;
+    $resultado2 = $numeroUm - ($resultado * $numeroDois);
+    return $resultado2;
+});
