@@ -59,3 +59,10 @@ route::get('multiplicacao', function (request $request) {
     $resultado = ($numeroUm + $numeroDois + $numeroTres + $numeroQuatro + $numeroCinco) /5;
     return $resultado;
 });
+
+route::get('receber', function (request $request) {
+    $numeroUm = $request->input('primeiroNumero');
+    $numeroDois = $request->input('segundoNumero');
+    $resultado =$numeroDois / $numeroUm;
+    return $resultado;
+});
