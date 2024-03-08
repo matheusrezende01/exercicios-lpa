@@ -35,3 +35,10 @@ Route::get('calculo', function (request $request) {
     $resultado = $numeroUm - $numeroDois - $numeroTres;
     return $resultado;
 });
+
+Route::get('divi', function (request $request) {
+    $numeroUm = $request->input('primeiroNumero');
+    $numeroDois = $request->input('segundoNumero');
+    $resultado =$numeroUm / $numeroDois;
+    return $resultado;
+});
