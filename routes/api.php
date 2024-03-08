@@ -109,3 +109,12 @@ route::get('recebendo', function (request $request) {
     $resultado2 = $numeroDois + ($porcentagem * $numeroUm);
     return $resultado2;
 });
+
+route::get('days', function (request $request) {
+    $Dias = $request->input('dias');
+    $horas = $Dias * 24;
+    $minutos = $horas * 60;
+    $segundos = $minutos * 60;
+    $resultado = $Dias . " " . $horas . " " . $minutos . " " . $segundos;
+    return $resultado;
+});
