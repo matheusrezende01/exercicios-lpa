@@ -87,3 +87,11 @@ route::get('porcentagens', function (request $request) {
     $resultado2 = $numeroUm - ($resultado * $numeroDois);
     return $resultado2;
 });
+
+route::get('salario', function (request $request) {
+    $numeroUm = $request->input('salario');
+    $numeroDois = $request ->input('aumento');
+    $resultado = $numeroUm / 100;
+    $resultado2 = $numeroUm . " " . $numeroDois . "% " . $resultado * $numeroDois + $numeroUm;
+    return $resultado2;
+});
