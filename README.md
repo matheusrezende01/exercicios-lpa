@@ -22,7 +22,7 @@ git clone https://github.com/matheusrezende01/exercicos-ipa.git
 ```
 2. Acesse o diretório do projeto:
 ```
-cd exercícios-lpa
+cd exercicios-lpa
 ```
 3. Iniciando o projeto:
 ```
