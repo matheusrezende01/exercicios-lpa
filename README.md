@@ -18,7 +18,7 @@ Certifique-se de ter os seguintes requisitos atendidos antes de começar a traba
 1. Clone este repositório para seu ambiente dedesenvolvimento local utilizando o comando:
 
 ```
-git clone https://github.com/matheusrezende01/exercicos-ipa.git
+git clone https://github.com/matheusrezende01/exercicios-lpa.git
 ```
 2. Acesse o diretório do projeto:
 ```
