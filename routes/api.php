@@ -125,3 +125,14 @@ route::get('buy', function (request $request) {
      $resultado = $compras * $quantidade;
      return $resultado;
  });
+
+route::get('exemplo/condicao', function (request $request) {
+$idade = $request->input('idade');
+$retorno = "";
+if($idade >=18){
+    $retorno = "maior de idade ";
+}
+else{
+    $retorno = "Menor de idade";
+}
+ });
