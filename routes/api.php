@@ -137,7 +137,7 @@ Route::get('exemplo/condicao', function (request $request) {
     return $retorno;
 });
 
-Route::get('verifica/idade', function(Request $request) {
+Route::get('exercicio/3', function(Request $request) {
     $idade = $request->input('idade');
 
     if ($idade >= 18) {
@@ -160,7 +160,7 @@ else {
 
 });
 
-Route::get("receber/numero" , function(Request $request){
+Route::get("exercicio/1" , function(Request $request){
     $numero = $request-> input("numero"); 
     
     if($numero > 10){
@@ -182,7 +182,7 @@ Route::get("receber/numero" , function(Request $request){
     });
 
 
-    Route::get("determine/numero" , function(Request $request){
+    Route::get("exercicio/2" , function(Request $request){
         $numero = $request-> input ('numero');
         if($numero > 0){
         return "é positivo";
@@ -194,6 +194,106 @@ Route::get("receber/numero" , function(Request $request){
     return "é zero";
         }
     });
+
+
+    Route::get('informar/divisao', function(Request $request){
+        $numero = $request->input('numero');
+
+        if($numero % 3 == 0){
+            return "divisivel por 3";
+        } else {
+            return "não divisivel por 3";
+        }
+    });
+
+
+
+Route::get("exercicio/5", function(Request $request){
+        $numeroUm = $request->input("numeroUm");
+        $numeroDois = $request->input("numeroDois");
+
+        if($numeroUm > $numeroDois){
+          return "o primeiro numero e maior"; 
+        } else {
+            return 'o segundo numero e maior';
+        }
+
+    });
+
+
+    Route::get('exercicio/6', function(Request $request){
+        $numero = $request->input('numero');
+
+        if($numero % 9 == 0){
+            return "divisivel por 9";
+        } else {
+            return "não divisivel por 9";
+        }
+    });
+
+    Route::get('exercicio/8', function(Request $request){
+        $numero = $request->input('numero');
+
+        if($numero % 7 == 0){
+            return "multiplo por 7";
+        } else {
+            return "não e multiplo por 7";
+        }
+    });
+
+    Route::get('exercicio/9', function(Request $request) {
+        $idade = $request->input('idade');
+    
+        if ($idade > 12) {
+            return "nao e uma criança";
+        } else {
+            return "e uma criança";
+        }
+    });
+
+    Route::get('exercicio/10', function(Request $request) {
+        $idade = $request->input('idade');
+
+        if($numero > 0){
+        return "é positivo";
+        
+        } else {
+
+            if($numero > 0);
+            return "é impar"
+
+        }
+    });
+
+
+
+    
+    
+     
+
+
+    Route::get("exercicio/11" , function(Request $request){
+        $numero = $request-> input ('numero');
+        if($numero > 100){
+        return "é maior que 100";
+        }
+        if($numero < 100){
+        return "é menor que 100";
+     } else {
+    if($numero = 100);
+    return "é igual a 100";
+         }
+    });
+
+
+   
+
+
+
+   
+
+
+
         
 
 
