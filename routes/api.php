@@ -386,6 +386,18 @@ Route::get("exercicio/5", function(Request $request){
  });
 
 
+ Route::get('exercicio/1', function(Request $request){
+    $numeroUm =  $request->input("numeroUm");
+    $numeroDois = $request->input("numeroDois");
+    $numeroTres = $request->input("numeroTres");
+    $media = ($numeroUm + $numeroDois + $numeroTres) /3;
+   if($media >  7){
+   return "aprovado";
+   }else{
+    return "reprovado";
+   }
+ });
+
 
 
 
