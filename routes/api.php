@@ -171,7 +171,7 @@ Route::get("exercicio/1" , function(Request $request){
     });
 
 
-    Route::get("temperatura/atual" , function(Request $request){
+    Route::get("exercicio/7" , function(Request $request){
         $temperatura = $request-> input ("temperatura atual");
       
         if($temperatura > 30){
@@ -186,13 +186,12 @@ Route::get("exercicio/1" , function(Request $request){
         $numero = $request-> input ('numero');
         if($numero > 0){
         return "é positivo";
-        }
-        if($numero < 0){
+        }else if($numero == 0){
+      return "é zero";
+        }else if($numero < 0){
         return "é negativo";
         }
-         else {
-    return "é zero";
-        }
+
     });
 
 
@@ -244,7 +243,7 @@ Route::get("exercicio/5", function(Request $request){
     Route::get('exercicio/9', function(Request $request) {
         $idade = $request->input('idade');
     
-        if ($idade > 12) {
+        if ($idade >= 12) {
             return "nao e uma criança";
         } else {
             return "e uma criança";
@@ -252,17 +251,15 @@ Route::get("exercicio/5", function(Request $request){
     });
 
     Route::get('exercicio/10', function(Request $request) {
-        $idade = $request->input('idade');
+        $numero = $request->input('numero');
 
         if($numero > 0){
-        return "é positivo";
-        
-        } else {
-
-            if($numero > 0);
-            return "é impar"
+        if ($numero % 2 != 0){
+            return "O numero é positivo e impar";
 
         }
+
+    }
     });
 
 
@@ -287,6 +284,115 @@ Route::get("exercicio/5", function(Request $request){
 
 
    
+    Route::get('exercicio/12', function(Request $request){
+        $numero = $request->input('numero');
+
+        if($numero % 6 == 0){
+            return "multiplo por 6";
+        } else {
+            return "não e multiplo por 6";
+        }
+    });
+
+
+    Route::get('exercicio/13', function (request $request) {
+        $nome = $request->input('nome');
+       if ($nome == "alice"){
+       return "Olá, Alice!";
+
+       }
+    });
+
+    Route::get('exercicio/14', function(Request $request){
+        $dirigir = $request->input('dirigir');
+        if ($dirigir >= 18) {
+            return "pode dirigir";
+        } else {
+            return "não pode dirigir";
+        }
+    });
+
+    Route::get("exercicio/16", function(Request $request){
+        $numeroUm = $request->input("numeroUm");
+        $numeroDois = $request->input("numeroDois");
+
+        if($numeroUm < $numeroDois){
+          return "o primeiro numero e menor"; 
+        } else {
+            return 'o segundo numero e menor';
+        }
+
+    });
+
+    Route::get('exercicio/17', function(Request $request){
+        $idade = $request->input('idade');
+        $nome = $request->input('nome');
+         if ($idade >= 18){
+            return "voce é maior de idade";
+
+         } else {
+
+            return "voce nao e maior de idade";
+
+            }
+    
+      
+        
+    });
+
+
+
+    Route::get('exercicio/18', function(Request $request){
+        $numeroUm =  $request->input("numeroUm");
+        $numeroDois = $request->input("numeroDois");
+       
+        if($numeroUm == 0){
+        return "nao e possível efetuar a divisao pois o primeiro numero e zero";
+
+       } else if( $numeroDois == 0){
+        return "nao e possível efetuar a divisao pois o primeiro numero e zero";
+    }
+        $resultado =  $numeroUm / $numeroDois;
+        return "o resultado e " .  $resultado;
+       
+
+    });
+
+
+    Route::get('exercicio/19', function(Request $request){
+        $numeroUm =  $request->input("numeroUm");
+        $numeroDois =  $request->input("numeroDois");
+        $resultado1 = $numeroUm * $numeroDois;
+        if($resultado1 >= 100){
+            return "é maior que 100";
+        } else {
+            return "é menor que 100";
+        }
+    });
+
+
+    Route::get('exercicio/20', function(Request $request){
+        $numeroUm =  $request->input("numeroUm");
+        $numeroDois = $request->input("numeroDois");
+        $resultado1 = $numeroUm + $numeroDois;
+        if($resultado1 % 2 == 0){
+        return $numeroUm * $numeroDois; 
+        } else if ($resultado1 % 2 !=0){
+            return ($numeroUm / $numeroDois);
+
+        }
+
+
+ });
+
+
+
+
+
+
+
+
+
 
 
 
